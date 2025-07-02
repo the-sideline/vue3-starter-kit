@@ -17,21 +17,45 @@ A modern, opinionated Vue 3 + Vite + TypeScript starter project with Pinia, Vue 
 src/
 ├── assets/               # Static assets (images, fonts, icons)
 ├── components/           # Reusable UI components
-│   └── base/             # Base components (e.g. BaseButton, LanguageSwitcher)
+│   ├── base/             # Base components (e.g. BaseButton, LanguageSwitcher)
+│   └── icons/            # Icon components
 ├── composables/          # Reusable logic (Composition API)
 ├── constants/            # Global constants/enums
+├── directives/           # Custom Vue directives
 ├── layouts/              # App layout components
 ├── locales/              # i18n translation files (en.json, nl.json)
+├── middleware/           # Route guards and middleware
 ├── pages/                # Route-level components (Home, About, Welcome)
 ├── plugins/              # Plugins (e.g. i18n setup)
 ├── router/               # Router setup
+├── services/             # API calls and external services
 ├── store/                # Pinia stores
 ├── types/                # TypeScript types/interfaces
 ├── utils/                # Helper functions
+├── views/                # Alternative to pages (some teams prefer this)
 ├── App.vue               # Root component
-├── main.ts               # App entry point
-└── shims-vue.d.ts        # Vue file type support for TS
+└── main.ts               # App entry point
 ```
+
+### 📋 Folder Purpose Guide
+- **`assets/`** - Static files like images, fonts, and icons
+- **`components/`** - Reusable Vue components
+  - **`base/`** - Primitive/base components (buttons, inputs, etc.)
+  - **`icons/`** - SVG icon components
+- **`composables/`** - Vue 3 Composition API reusable logic
+- **`constants/`** - Application-wide constants and configuration
+- **`directives/`** - Custom Vue directives for DOM manipulation
+- **`layouts/`** - Page layout components (header, footer, sidebar)
+- **`locales/`** - Internationalization translation files
+- **`middleware/`** - Route guards and navigation middleware
+- **`pages/`** - Route-level page components
+- **`plugins/`** - Vue plugin configurations
+- **`router/`** - Vue Router configuration and routes
+- **`services/`** - API calls and external service integrations
+- **`store/`** - Pinia state management stores
+- **`types/`** - TypeScript type definitions and interfaces
+- **`utils/`** - Pure utility functions and helpers
+- **`views/`** - Alternative to pages (some teams prefer this naming)
 
 ## 🛠️ Getting Started
 
@@ -55,6 +79,14 @@ npm run dev
 - **Add new components:** Place them in `src/components/` or `src/components/base/` for base UI elements.
 - **Add new stores:** Create a new file in `src/store/` using Pinia.
 - **Add new translations:** Update the relevant JSON files in `src/locales/`.
+- **Add new composables:** Create reusable logic in `src/composables/`.
+- **Add new utilities:** Add helper functions in `src/utils/`.
+- **Add new types:** Define TypeScript interfaces in `src/types/`.
+- **Add new constants:** Add application constants in `src/constants/`.
+- **Add new services:** Create API calls in `src/services/`.
+- **Add new middleware:** Create route guards in `src/middleware/`.
+- **Add new directives:** Create custom Vue directives in `src/directives/`.
+- **Add new layouts:** Create layout components in `src/layouts/`.
 
 ## 🧹 Linting & Formatting
 ```bash
